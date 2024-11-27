@@ -123,4 +123,8 @@ button:hover {
   input {
     font-size: 14px;
   }
+  #feedback {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
 }
