@@ -28,7 +28,13 @@ button.addEventListener("click", () => {
     slots[index].textContent = `${index + 1}. ${answers[index]}`;
     correctAnswers[index] = true;
     feedback.textContent = "Resposta correta!";
+feedback.className = "success";
+feedback.style.opacity = 1;
     feedback.style.color = "green";
+    // Adicionar um efeito de fade-out após 2 segundos
+setTimeout(() => {
+  feedback.style.opacity = 0;
+}, 2000);
   } else if (index !== -1) {
     feedback.textContent = "Você já acertou essa!";
     feedback.style.color = "orange";
