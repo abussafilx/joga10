@@ -1,44 +1,70 @@
-/* Body e fundo */
+/* Configuração geral */
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #f1f1f1;
   margin: 0;
   padding: 0;
+  background: linear-gradient(135deg, #2c3e50, #4ca1af);
+  color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  color: #333;
 }
 
-/* Container central */
 .container {
-  text-align: center;
   background: #fff;
-  padding: 20px 30px;
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  color: #333;
   width: 90%;
-  max-width: 500px;
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Cabeçalho */
+/* Header */
+header {
+  text-align: center;
+}
+
 h1 {
-  color: #008000;
   font-size: 28px;
   margin-bottom: 10px;
+  color: #008000;
 }
 
-p.question {
+/* Barra de progresso */
+.progress-container {
+  width: 100%;
+  background: #ddd;
+  height: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 15px 0;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0;
+  background: #008000;
+  transition: width 0.5s ease;
+}
+
+/* Pergunta */
+.question-area {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.question {
   font-size: 18px;
   color: #555;
-  margin-bottom: 20px;
 }
 
-/* Estilo dos slots */
+/* Respostas */
 .answers ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .answers li {
@@ -48,28 +74,32 @@ p.question {
   color: #333;
   border: 2px solid #008000;
   border-radius: 10px;
-  text-align: center;
   font-size: 16px;
-  font-weight: bold;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
+  transition: all 0.3s ease;
 }
 
 .answers li.correct {
   background: #00b300;
-  color: #fff;
+  color: white;
 }
 
 .answers li:hover {
-  transform: scale(1.02);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background: #c3f3c3;
+  cursor: pointer;
 }
 
-/* Input e botão */
+/* Controles */
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
 input {
-  width: 80%;
+  flex: 1;
   padding: 12px;
-  margin-top: 10px;
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -77,54 +107,25 @@ input {
 }
 
 button {
-  padding: 12px 25px;
-  margin-top: 10px;
-  font-size: 16px;
+  padding: 12px 20px;
+  background: #008000;
   color: white;
-  background-color: #008000;
   border: none;
   border-radius: 8px;
+  font-size: 16px;
   cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
-  background-color: #005900;
+  background: #005900;
   transform: translateY(-3px);
 }
 
 /* Feedback */
 #feedback {
+  text-align: center;
+  font-size: 18px;
   margin-top: 15px;
-  font-size: 16px;
-  font-weight: bold;
-  transition: all 0.3s ease;
-}
-
-#feedback.success {
   color: #008000;
-}
-
-#feedback.error {
-  color: #cc0000;
-}
-
-/* Responsividade */
-@media (max-width: 500px) {
-  h1 {
-    font-size: 22px;
-  }
-
-  button {
-    font-size: 14px;
-  }
-
-  input {
-    font-size: 14px;
-  }
-  #feedback {
-  opacity: 0;
-  transition: opacity 0.5s ease;
-}
 }
