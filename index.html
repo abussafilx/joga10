@@ -3,16 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <h1>⚽ Top 10 Futebol</h1>
+  <title>Top 10 Futebol</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
-    <h1>⚽ Top 10 Futebol</h1>
-    <p class="question">Quais são os 10 maiores artilheiros do Brasileirão?</p>
+    <!-- Header com título e progresso -->
+    <header>
+      <h1>⚽ Top 10 Futebol</h1>
+      <div class="progress-container">
+        <div id="progress-bar" class="progress-bar"></div>
+      </div>
+    </header>
+
+    <!-- Pergunta -->
+    <div class="question-area">
+      <p class="question">Quais são os 10 maiores artilheiros do Brasileirão?</p>
+    </div>
+
+    <!-- Respostas -->
     <div class="answers">
       <ul id="slots">
-        <!-- Slots para respostas -->
         <li>1. _______</li>
         <li>2. _______</li>
         <li>3. _______</li>
@@ -25,10 +36,17 @@
         <li>10. _______</li>
       </ul>
     </div>
-    <input type="text" id="guess" placeholder="Digite sua resposta aqui">
-    <button id="submit">Enviar</button>
+
+    <!-- Controle -->
+    <div class="controls">
+      <input type="text" id="guess" placeholder="Digite sua resposta">
+      <button id="submit">Enviar</button>
+    </div>
+
+    <!-- Feedback -->
     <p id="feedback"></p>
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>
